@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Luis Pablo">
+    <meta name="description" content="Bares para pasar el rato">
+    <meta name="Keywords" content="bar, comer, pasar el rato">
+    <title>Fuente de los barros</title>
+    <script src="https://kit.fontawesome.com/3ac747cd5d.js" crossorigin="anonymous"></script>
+    <style>
+        /*Esto me permite cambiar el fondo del background del body */
+        body{
+            background-image: url("https://www.roc21.com/blog/wp-content/uploads/2012/09/fondos-para-pa%CC%81ginas-web-6.jpg");
+            background-color: #cccccc;
+            }
+            /*Cambiamos la centralización del texto escrito en h1 jutno con el tamaño y color además de una animación*/
+        h1{ 
+            text-align: center;
+            display: inline; 
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            animation: mymove 5s;
+            }
+            /*Esto son keyframes o los "Comandos" que nos prmite realizar la animación*/
+        @keyframes mymove {
+            from {left: -350px;}
+            to {left: -5px;}
+            }
+            /*cambiamos el color de todos lso parrafos*/
+        p{
+            color:sandybrown;
+            }
+        ul, li{
+            color:navajowhite;
+            font-size: 30px;
+            }
+            /*Cambiamos el color de todos los enlaces*/
+        a{
+            color: green;
+            }
+            /*Con dichos item nos pemite poner un grid para la maquetación de dichapagina web*/
+        .item1 { grid-area: header; }
+        .item2 { grid-area: menu; }
+        .item3 { grid-area: main;
+        color: blue; }
+        .item4 { grid-area: right;
+        color: violet; }
+        .item5 { grid-area: footer;
+        color: pink; }
+                /*Esta es la maquetación que se va a hacer por defecto*/
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+            'header header header header header header'
+            'menu main main main right right'
+            'footer footer footer footer footer footer';
+            gap: 10px;
+            padding: 10px;
+            }
+        .grid-container > div {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+            }
+    </style>
+</head>
+<body >
+    <div class="grid-container">
+        <header class="item1">
+            <!--Este es el title que nos va a aparecer por pantalla-->
+            <h1>Fuente de los barros</h1>
+            <img src="https://static.hoy.es/www/pre2017/multimedia/prensa/noticias/201012/01/fotos/2991275.jpg" alt="fuete de los barros" title="fuente de los barros" style="width: 1000px; height: 500px;">
+        </header>
+        <menu class="item2">
+            <!--Este es el navegador para ir a las distintas opciones y paginas web suplementarias que hay-->
+            <nav>
+                <ul>
+                    <li><a href="paginas auxiliar/historia.html">historia</a></li>
+                    <li><a href="paginas auxiliar/actividades.html">Actividades</a></li>
+                    <li><a href="paginas auxiliar/servicios.html">servicios</a></li>
+                    <li><a href="paginas auxiliar/sobre nosotros.html">Sobre nosotros</a></li>
+                </ul>
+        </menu>
+        <main class="item3">
+        </main>  
+        <right class="item4">
+        </right>
+        <footer class="item5">
+            <i class="fa-solid fa-phone">924050602</i>
+        </footer>
+    </div>
+</body>
+</html>
